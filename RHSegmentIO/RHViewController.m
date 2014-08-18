@@ -7,6 +7,9 @@
 //
 
 #import "RHViewController.h"
+#import <Analytics.h>
+
+#define USER @"Roy Hsu"
 
 @interface RHViewController ()
 
@@ -18,12 +21,35 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self setup];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)setup
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [[SEGAnalytics sharedAnalytics] identify:USER];
+}
+
+- (void)trackingCode
+{
+    [[SEGAnalytics sharedAnalytics] screen:@"Tracking 1"];
+    [[SEGAnalytics sharedAnalytics] track:@"Action 1"];
+}
+
+- (void)trackingCode2
+{
+    [[SEGAnalytics sharedAnalytics] screen:@"Tracking 2"];
+    [[SEGAnalytics sharedAnalytics] track:@"Action 2"];
+}
+
+- (IBAction)sendTrackingButton:(id)sender
+{
+    [self trackingCode];
+}
+
+- (IBAction)sendTrackingButton2:(id)sender
+{
+    [self trackingCode2];
 }
 
 @end

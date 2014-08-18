@@ -7,12 +7,21 @@
 //
 
 #import "RHAppDelegate.h"
+#import <Analytics.h>
+
+#define SEGMENT_IO_WRITE_KEY @"prdj2j7jib"
 
 @implementation RHAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // Setup Segment.io
+    [SEGAnalytics setupWithConfiguration:[SEGAnalyticsConfiguration configurationWithWriteKey:SEGMENT_IO_WRITE_KEY]];
+    // Debug mode.
+    [SEGAnalytics debug:YES];
+    
     return YES;
 }
 							

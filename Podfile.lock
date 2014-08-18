@@ -1,0 +1,30 @@
+PODS:
+  - Analytics/Core-iOS (1.5.10):
+    - Analytics/Segmentio
+    - TRVSDictionaryWithCaseInsensitivity (= 0.0.2)
+  - Analytics/GoogleAnalytics (1.5.10):
+    - Analytics/Core-iOS
+    - GoogleAnalytics-iOS-SDK (~> 3.0.7)
+  - Analytics/Mixpanel (1.5.10):
+    - Analytics/Core-iOS
+    - Mixpanel (~> 2.3.6)
+  - Analytics/Segmentio (1.5.10):
+    - Analytics/Core-iOS
+    - Reachability (= 3.1.1)
+  - GoogleAnalytics-iOS-SDK (3.0.9)
+  - Mixpanel (2.3.6)
+  - Reachability (3.1.1)
+  - TRVSDictionaryWithCaseInsensitivity (0.0.2)
+
+DEPENDENCIES:
+  - Analytics/GoogleAnalytics (~> 1.2)
+  - Analytics/Mixpanel (~> 1.2)
+
+SPEC CHECKSUMS:
+  Analytics: b2554e9f725296533aa7868cb168388de12981ef
+  GoogleAnalytics-iOS-SDK: d9e198b1f955259a72886769be7377cdfcdb2250
+  Mixpanel: 9aba38257fc4d2777ab5db1afc55e22bdfd57a4a
+  Reachability: 8e9635e3cb4f98e7f825e51147f677ecc694d0e7
+  TRVSDictionaryWithCaseInsensitivity: a61daa8469fa079e05b694f6aad5441785c837d1
+
+COCOAPODS: 0.33.1
